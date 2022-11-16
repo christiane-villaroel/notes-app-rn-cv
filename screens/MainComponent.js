@@ -1,21 +1,19 @@
-import { useState } from "react";
-import { View } from "react-native";
 import NotesScreen from "./NotesScreen";
-import { NOTES } from "../shared/notes";
 import { createStackNavigator } from "@react-navigation/stack";
-/* import { createStackNavigator } from "@react-navigation/stack"; */
+import { NOTES } from "../shared/notes";
+import { useState } from "react";
 
 
 const Stack = createStackNavigator();
-
 function NotesNavigator() {
-    const [notes, setNotes] =useState(NOTES);
+    const [notes, setNotes]=useState(NOTES)
+
     return (
         <Stack.Screen
             name="Notes"
             component={NotesScreen}
         >
-            {(notes) => <NotesScreen data={notes} />}
+            {(notes)=> <NotesScreen data={notes}/>}
         </Stack.Screen>
     );
 }
@@ -23,12 +21,17 @@ function NotesNavigator() {
 const Main = () => {
 
     return (
-        <View>
-            <Stack.Navigator>
-                <NotesNavigator/>
-            </Stack.Navigator>
-        </View>
+        <Stack.Navigator initialRouteName='Notes'>
+            <NotesNavigator/>
+        </Stack.Navigator>
     );
 }
 
+ {
+      /*  <View style={{flex:1,alignItems:'center', justifyContent:'center'}}>
+          <Text>Home Screen</Text>
+        </View> */
+    /*  <Stack.Navigator>
+                <NotesNavigator/>
+            </Stack.Navigator> */}
 export default Main;

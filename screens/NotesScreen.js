@@ -1,8 +1,10 @@
 import { FlatList, View,Text,StyleSheet } from "react-native";
 import { ListItem } from "react-native-elements";
+import { useState } from "react";
 /* import {ListItem } from "react-native-elements"; */
 
 function NotesScreen({ notes }) {
+    
     const renderNoteItem = ({ item: note }) => {
         return (
             <ListItem style={styles.listItem}>
@@ -12,7 +14,7 @@ function NotesScreen({ notes }) {
             </ListItem>
         );
     };
-
+ 
     return (
 
         <FlatList
@@ -20,15 +22,13 @@ function NotesScreen({ notes }) {
             renderItem={renderNoteItem}
             keyExtractor={(item) => item.id.toString()} />
 
-    );
+    ); 
 }
 
 const styles = StyleSheet.create({
     listItem:{
         borderBottomColor:'black',
         borderWidth:2,
-        
-
     }
 })
 
