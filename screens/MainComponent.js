@@ -1,7 +1,6 @@
 import NotesScreen from "./NotesScreen";
 import { createStackNavigator } from "@react-navigation/stack";
-import { NOTES } from "../shared/notes";
-import { useState } from "react";
+
 
 const Stack = createStackNavigator();
 
@@ -19,13 +18,12 @@ const Stack = createStackNavigator();
  */
 
 const Main = () => {
-    const [notes, setNotes]= useState(NOTES)
     return (
         <Stack.Navigator initialRouteName='Notes'>
             <Stack.Screen
             name="Notes"
+            component={NotesScreen}
             >
-                {props => <NotesScreen {...props} extraData={notes} />}
             </Stack.Screen>   
         </Stack.Navigator>
     );
