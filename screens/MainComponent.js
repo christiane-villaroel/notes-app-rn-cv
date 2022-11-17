@@ -1,21 +1,8 @@
 import NotesScreen from "./NotesScreen";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import { useState } from "react";
 
 const Stack = createStackNavigator();
-
-/* function NotesNavigator() {
-  
-
-    return (
-        <Stack.Screen
-            name="Notes"
-        >
-            {(notes)=> <NotesScreen data={notes}/>}
-        </Stack.Screen>   
-    );
-} 
- */
 
 const Main = () => {
     return (

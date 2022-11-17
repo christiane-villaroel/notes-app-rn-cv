@@ -21,3 +21,7 @@ This notes app is to help me understand how to better deepen my understanding of
 - Issues: Passing Props in render callback function for Notescreen component.
   - I stored NOTES data object into a useState Hook, `notes`, trying to pass it a prop this way`{(notes)=> <NotesScreen data={notes}>}`, then tried another recommended in the React Navigation Documentation `{(props)=> <NotesScreen {...props}extraData={notes}>}`. However both ways yielded the error as the chrome debugger kept reading the props as undefined.
   - Alternative Solution: imported NOTES and useState() Hook into NoteScreen.js. and passing `notes` useState as prop in <FlatList> component using `data={}` attribute.
+
+### 11/16/22:
+
+- `onPress` event => added on press event handler to <ListItem> component, so far it only logs the id of the item pressed.
