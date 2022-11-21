@@ -25,3 +25,14 @@ This notes app is to help me understand how to better deepen my understanding of
 ### 11/16/22:
 
 - `onPress` event => added on press event handler to <ListItem> component, so far it only logs the id of the item pressed.
+
+### 11/21/22
+
+- Main Component: Made NotesScreen the default initial route in Stack.Navigator component.
+- Deleted Home screen route(will implement in a later time)
+
+# Primary Goal this Week:
+
+- Render Notes descrition when user press notes title.
+
+- Store data in server and make GET request to retrieve data.

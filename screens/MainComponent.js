@@ -15,4 +15,4 @@ const Main = () => {
         </Stack.Navigator>
     );
 }
-export default Main;
+export default Main; 
